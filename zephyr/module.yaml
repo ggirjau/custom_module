@@ -1,0 +1,4 @@
+name: custom_module
+build:
+  cmake-ext: True
+  kconfig-ext: True

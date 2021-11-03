@@ -1,8 +1,6 @@
-#
-# Copyright (c) 2021 Linaro, Limited
-#
-# SPDX-License-Identifier: Apache-2.0
-#
+cmake_minimum_required(VERSION 3.20.0)
 
-add_subdirectory(${ZEPHYR_CURRENT_MODULE_DIR} hal_nxp)
-add_subdirectory_ifdef(CONFIG_USB_DEVICE_DRIVER usb)
+find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
+project(custom_module)
+
+target_sources(app PRIVATE src/main.c)
